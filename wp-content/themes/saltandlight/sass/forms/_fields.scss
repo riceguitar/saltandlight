@@ -49,3 +49,50 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+.gform_wrapper {
+	input[type=text],
+	input[type=email],
+	textarea {
+		background: none;
+		border: none;
+		border-radius: 0;
+		border-bottom: 1px solid rgba(255,255,255,.2);
+		color: #fff;
+		outline: none;
+	}
+	textarea {
+		margin-top: .75em;
+	}
+	.hide-labels {
+		.ginput_complex {
+			label {
+				display: none;
+			}
+		}
+	}
+}
+
+.gform_wrapper.footer-form_wrapper {
+	margin-bottom: 3em;
+	max-width: 100%;
+	
+	.gform_footer {
+		text-align: center;
+		input.button {
+			border: none;
+			background: $color__highlight;
+			box-shadow: none;
+			color: #fff;
+			text-shadow: none;
+			border-radius: 50px;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 35px;
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+	}
+}

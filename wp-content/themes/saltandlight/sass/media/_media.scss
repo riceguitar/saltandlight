@@ -14,6 +14,24 @@ object {
 	max-width: 100%;
 }
 
+.play-button {
+	background: url('img/play-button.png') no-repeat 57% center;
+	background-size: 35px;
+	border-radius: 100%;
+	border: 1px solid #fff;
+	display: inline-block;
+	height: 85px;
+	width: 85px;
+	line-height: 85px;
+}
+
+.play-wrap {
+	max-width: 50%;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/

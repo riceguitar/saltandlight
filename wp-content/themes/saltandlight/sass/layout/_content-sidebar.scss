@@ -18,3 +18,9 @@
 	clear: both;
 	width: $size__site-main;
 }
+
+.site-width {
+	display: block;
+	width: $size__site-width;
+	margin: 0 auto;
+}

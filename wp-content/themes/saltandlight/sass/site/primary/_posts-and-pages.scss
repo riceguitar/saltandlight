@@ -26,3 +26,47 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.content-area {
+	max-width: $size__site-width;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.page-heading {
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: $size__heading-height;
+	position: relative;
+}
+
+.page-player {
+	position: absolute;
+    bottom: 40%;
+    margin-bottom: -45px;
+}
+
+.site-footer {
+	background: #262626;
+	text-align: center;
+	padding: 75px 0;
+	h6 {
+		font-weight: 100;
+		font-size: 40px;
+		color: #fff;
+		margin: 0;
+	}
+	.footer-link {
+		font-size: 16px;
+		font-weight: 100;
+		text-align: center;
+		color: #fff;
+		text-decoration: none;
+		img {
+			margin-bottom: 12.5px;
+			display: block;
+		}
+	}
+}
+
+
