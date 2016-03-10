@@ -12,8 +12,39 @@ function saltandlight_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 
+	class Menu_With_Description extends Walker_Nav_Menu {
+		function start_el(&$output, $item, $depth, $args) {
+			global $wp_query;
+			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+			
+			$class_names = $value = '';
+
+			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+
+			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+			$class_names = ' class="' . esc_attr( $class_names ) . '"';
+
+			$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+
+			$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
+			$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
+			$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
+			$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
+
+			$item_output = $args->before;
+			$item_output .= '<a'. $attributes .'>';
+			$item_output .= '<span class="menu-link">' . $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after . '</span>';
+			$item_output .= '<span class="menu-desc">' . $item->description . '</span>';
+			$item_output .= '</a>';
+			$item_output .= $args->after;
+
+			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+		}
+	}
+
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'saltandlight' ),
+		'homepage' => esc_html__( 'Home Page', 'saltandlight' ),
 	) );
 
 	add_theme_support( 'html5', array(
@@ -64,11 +95,12 @@ add_action( 'widgets_init', 'saltandlight_widgets_init' );
  */
 function saltandlight_scripts() {
 
-	wp_enqueue_style( 'saltandlight-bootstrap', get_template_directory_uri() . '/bootstrap.css' );
+	wp_enqueue_style( 'saltandlight-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
 	wp_enqueue_style( 'saltandlight-litycss', get_template_directory_uri() . '/js/lity.min.css' );
 	wp_enqueue_style( 'saltandlight-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'saltandlight-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic' );
+	wp_enqueue_style( 'saltandlight-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,400italic,600italic,700italic' );
 	wp_enqueue_script('jquery', false, array(), false, false);
+	wp_enqueue_script( 'saltandlight-bsjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array(), '20151215', false );
 	wp_enqueue_script( 'saltandlight-lityjs', get_template_directory_uri() . '/js/lity.min.js', array(), '20151215', false );
 	wp_enqueue_script( 'saltandlight-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'saltandlight-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

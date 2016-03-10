@@ -91,6 +91,32 @@
 		border: none;
 		border-color: $color__highlight;
 	}
+	li.home-enhanced a {
+		padding-top: 0;
+		.menu-desc {
+			font-weight: 100;
+			font-size: 12px;
+		}
+	}
+	li.home-enhanced a span.menu-link {
+		display: block;
+		background: $color__highlight;
+		border: none;
+		border-color: $color__highlight;
+		border: 0px solid #fff;
+		border-radius: 100px;
+		box-sizing: border-box;
+		color: #ffffff;
+		display: block;
+		text-decoration: none;
+		margin: 10px 0 10px 0;
+		padding: 10px 32px;
+		text-align: center;
+		transition: .25s all;
+		&:hover {
+			background: darken($color__highlight, 10%);
+		}
+	}
 
 	.current_page_item > a,
 	.current-menu-item > a,

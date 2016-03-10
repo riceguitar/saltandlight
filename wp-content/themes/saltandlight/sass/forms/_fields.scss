@@ -51,6 +51,12 @@ textarea {
 }
 
 .gform_wrapper {
+}
+
+.gform_wrapper.footer-form_wrapper {
+	margin-bottom: 3em;
+	max-width: 100%;
+	
 	input[type=text],
 	input[type=email],
 	textarea {
@@ -71,12 +77,7 @@ textarea {
 			}
 		}
 	}
-}
 
-.gform_wrapper.footer-form_wrapper {
-	margin-bottom: 3em;
-	max-width: 100%;
-	
 	.gform_footer {
 		text-align: center;
 		input.button {
@@ -96,3 +97,165 @@ textarea {
 		}
 	}
 }
+
+.gform_wrapper.pastor_form_wrapper {
+	input {
+		border: 1px solid lighten($color__text, 50%);
+		border-width: 0 0 1px 0;
+		border-radius: 0;
+		outline: 0;
+	}
+	label {
+		font-weight: normal;
+	}
+	.top_label .gfield_label {
+		font-weight: normal;
+	}
+	ul.gfield_radio li input[type=radio]:checked+label {
+		font-weight: normal;
+	}
+	textarea {
+		outline: 0;
+		border-radius: 0;
+	}
+	.ginput_complex.ginput_container input[type=text] {
+		width: 100% !important;
+	}
+	.top_label li.gfield.gf_right_half {
+		margin-right: 0;
+		width: 49%;
+		input.medium {
+			width: 100%;
+		}
+	}
+	.top_label li.gfield.gf_left_half {
+		margin-right: 2%;
+		width: 49%;
+	}
+	.gform_wrapper .ginput_complex .ginput_left, 
+	.gform_wrapper .ginput_complex .ginput_right {
+		width: 49%;
+	}
+	.gform_wrapper .ginput_complex .ginput_right {
+		margin-left: 2%;
+	}
+	.gsection {
+		border: none;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+		padding-top: 2em !important;
+		h2.gsection_title {
+			color: $color__primary;
+			font-size: 13px;
+			font-weight: normal;
+			text-transform: uppercase;
+			text-indent: 4px;
+		}
+	}
+	select {
+		height: 2em;
+		margin-top: 1em;
+		background: none;
+		border-radius: 0;
+		border: 1px solid #ccc;
+		-webkit-appearance: none;
+		border-width: 0 0 1px 0;
+		&:focus {
+			outline: 0;
+		}
+	}
+	.gform_footer {
+		text-align: center;
+		input.button {
+			border: none;
+			background: $color__highlight;
+			box-shadow: none;
+			color: #fff;
+			text-shadow: none;
+			border-radius: 50px;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 35px;
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+	}
+
+	.hidden_label input.large, 
+	.hidden_label select.large, 
+	.top_label input.large, 
+	.top_label select.large,
+	textarea.medium {
+		width: 100%;
+	}
+
+	@media screen and (max-width: 600px) {
+		.ginput_complex .ginput_right,
+		.ginput_complex .ginput_left {
+			display: block; 
+			width: 100%;
+			margin-left: 0;
+		}
+		li.gfield.gf_list_2col ul.gfield_radio li {
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+		ul.gform_fields li.gfield span.name_first, 
+		ul.gform_fields li.gfield span.name_last, 
+		ul.gform_fields li.gfield span.name_middle {
+			width: 100%;
+		}
+		.top_label li.gfield.gf_left_half,
+		.top_label li.gfield.gf_right_half {
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+}
+
+
+#invite-pastor {
+	input[type=submit] {
+		border: none;
+		background: $color__highlight;
+		box-shadow: none;
+		color: #fff;
+		text-shadow: none;
+		border-radius: 50px;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 35px;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+
+	.form-field {
+		margin-bottom: 1em;
+	}
+
+	.form-field-border {
+		border-bottom: 1px solid #ddd;
+		input {
+			border: none;
+			width: 70%;
+		}
+	}
+
+	textarea {
+		padding: 0;
+		border: none;
+		margin-top: 1em;
+	}
+}
+
+
+

@@ -24,20 +24,39 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-			?>
-		</div><!-- .site-branding -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="site-branding">
+						<?php if ( is_front_page() && is_home() ) : ?>
+							<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<span class="site-logo-credit">brought to you by EQUIP</span>
+							</h1>
+						<?php else : ?>
+							<p class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<span class="site-logo-credit">brought to you by EQUIP</span>
+							</p>
+						<?php
+						endif;
+						?>
+					</div><!-- .site-branding -->
+				</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'saltandlight' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+				<div class="col-md-8">
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'saltandlight' ); ?></button>
+						<?php if (is_page('home')) : ?>
+							<?php $walker = new Menu_With_Description; ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'homepage', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu', 'walker' => $walker ) ); ?>
+						<?php else: ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						<?php endif; ?>
+					</nav><!-- #site-navigation -->
+
+				</div>
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

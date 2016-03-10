@@ -74,6 +74,50 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/contact-address.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2408,
+		"inputAbbreviatedPath": "\/img\/contact-address.png",
+		"outputAbbreviatedPath": "\/img\/contact-address.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/contact-message.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2067,
+		"inputAbbreviatedPath": "\/img\/contact-message.png",
+		"outputAbbreviatedPath": "\/img\/contact-message.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/contact-phone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5461,
+		"inputAbbreviatedPath": "\/img\/contact-phone.png",
+		"outputAbbreviatedPath": "\/img\/contact-phone.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/john-maxwell.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 411542,
+		"inputAbbreviatedPath": "\/img\/john-maxwell.png",
+		"outputAbbreviatedPath": "\/img\/john-maxwell.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/non-pastor-process.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -81,6 +125,17 @@
 		"initialSize": 67819,
 		"inputAbbreviatedPath": "\/img\/non-pastor-process.png",
 		"outputAbbreviatedPath": "\/img\/non-pastor-process.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/plane.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3493,
+		"inputAbbreviatedPath": "\/img\/plane.png",
+		"outputAbbreviatedPath": "\/img\/plane.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -107,6 +162,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/square.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7801,
+		"inputAbbreviatedPath": "\/img\/square.png",
+		"outputAbbreviatedPath": "\/img\/square.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/step-arrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2966,
+		"inputAbbreviatedPath": "\/img\/step-arrow.png",
+		"outputAbbreviatedPath": "\/img\/step-arrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/step01-local-church.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -114,6 +191,50 @@
 		"initialSize": 6644,
 		"inputAbbreviatedPath": "\/img\/step01-local-church.png",
 		"outputAbbreviatedPath": "\/img\/step01-local-church.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/step02-facilitators.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8721,
+		"inputAbbreviatedPath": "\/img\/step02-facilitators.png",
+		"outputAbbreviatedPath": "\/img\/step02-facilitators.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/step03-roundtables.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17157,
+		"inputAbbreviatedPath": "\/img\/step03-roundtables.png",
+		"outputAbbreviatedPath": "\/img\/step03-roundtables.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/step04-transformation.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8584,
+		"inputAbbreviatedPath": "\/img\/step04-transformation.png",
+		"outputAbbreviatedPath": "\/img\/step04-transformation.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/trigger-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 494967,
+		"inputAbbreviatedPath": "\/img\/trigger-bg.jpg",
+		"outputAbbreviatedPath": "\/img\/trigger-bg.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -905,6 +1026,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/template-parts\/content.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/tmpl-homepage.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/tmpl-homepage.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/tmpl-video-header.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/tmpl-video-header.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
