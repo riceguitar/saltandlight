@@ -23,6 +23,17 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
+	<div class="visible-xs">
+		<a class="mobile-toggle">
+		<div id="nav-icon1">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
+		</a>
+		
+	</div>
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="row">
@@ -45,18 +56,24 @@
 				<div class="col-md-8">
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'saltandlight' ); ?></button>
-						<?php if (is_page('home')) : ?>
-							<?php $walker = new Menu_With_Description; ?>
-							<?php wp_nav_menu( array( 'theme_location' => 'homepage', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu', 'walker' => $walker ) ); ?>
-						<?php else: ?>
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						<?php endif; ?>
+						<div class="visible-sm visible-md visible-lg">
+							<!-- <button class="menu-toggle" aria-controls="overlaynav" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'saltandlight' ); ?></button> -->
+							<?php if (is_page('home')) : ?>
+								<?php $walker = new Menu_With_Description; ?>
+								<?php wp_nav_menu( array( 'theme_location' => 'homepage', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu', 'walker' => $walker ) ); ?>
+							<?php else: ?>
+								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+							<?php endif; ?>
+						</div>
 					</nav><!-- #site-navigation -->
 
 				</div>
 			</div>
 		</div>
 	</header><!-- #masthead -->
+
+	<nav class="mobile-nav" id="overlaynav">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'mobile-nav-menu', 'walker' => $walker ) ); ?>
+	</nav>
 
 	<div id="content" class="site-content">
