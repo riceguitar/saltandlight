@@ -37,7 +37,7 @@ get_header();
 							<span class="play-text"><?php the_field('video_text'); ?></span>
 						</a>
 					</div>
-					<div class="row">
+					<div class="row home-ctas">
 						<div class="col-sm-6 text-right">
 							<a href="<?php the_field('button_left_link'); ?>" class="max-button text-center"><?php the_field('button_left'); ?></a>
 						</div>

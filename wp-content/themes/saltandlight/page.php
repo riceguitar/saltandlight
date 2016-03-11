@@ -14,7 +14,7 @@
 
 get_header(); ?>
 	
-	<div class="page-heading page-heading-plain">
+	<div class="page-heading page-heading-plain" style="display: none;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -22,7 +22,6 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<div id="primary" class="content-area">
@@ -32,17 +31,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 			?>
 
-			
-			<section class="plain-page-content">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
 							<?php the_content(); ?>
-						</div>
-					</div>
-				</div>
-			</section>
-
 
 			<?php
 			endwhile; // End of the loop.
