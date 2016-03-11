@@ -68,6 +68,10 @@
 		&:hover > a,
 		&.focus > a {
 		}
+
+		@media screen and (max-width: 991px) {
+			margin-right: 20px;
+		}
 	}
 	
 	a {
@@ -84,6 +88,10 @@
 		border-radius: 100px;
 		padding-left: 28px;
 		padding-right: 28px;
+		@media screen and (max-width: 991px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 
 	li.login a {
@@ -182,16 +190,14 @@
 	height: 100%;
 	color: #fff;
 	transition: .75s all;
-	transform: translateX(100%);
+	transform: translateX(-100%);
 	top: 0;
 	left: 0;
 	a {
 		color: #fff;
 	}
 	&.show {
-		@media screen and (max-width: 768px) {
-			transform: translateX(0);
-		}
+		transform: translateX(0);
 	}
 	.mobile-nav-menu {
 		margin: 0;

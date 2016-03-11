@@ -48,6 +48,7 @@
 	background-repeat: no-repeat;
 	padding-top: $size__heading-height;
 	position: relative;
+	max-height: 100vh;
 	@media screen and (max-width: 768px) {
 		max-height: 100vh;
 		min-height: 100vh !important;
@@ -77,6 +78,10 @@
 	}
 }
 
+h1, h2, h3 {
+	line-height: 1.35em;
+}
+
 .page-process {
 	text-align: center;
 	.process-graphic {
@@ -101,12 +106,16 @@
 	z-index: 2;
 }
 
+.bang {
+	margin-top: -1px;
+}
+
 .bang_container {
 	max-height: 0px;
 	overflow: hidden;
 	transition: 1.5s all;
 	&.open {
-		max-height: 1000px;
+		max-height: 1500px;
 	}
 }
 
@@ -259,6 +268,7 @@
     left: 50%;
     bottom: 50%;
     transform: translate(-50%, 31%);
+    max-width: 100%;
 }
 
 .stories {
@@ -449,6 +459,11 @@
 .page-template-tmpl-homepage {
 	background: #a27d4a;
 	color: #fff;
+	@media screen and (max-width: 768px) {
+		background: url("img/john-maxwell-trans.png") no-repeat #a27d4a;
+		background-size: 135%;
+		background-position: 20% 30%;
+	}
 	.site-header {
 		@media screen and (max-width: 768px) {
 			position: relative;
@@ -472,13 +487,19 @@
 			margin-bottom: 14px;
 			position: relative; 
 			z-index: 4;
+			@media screen and (max-width: 1200px) {
+				font-size: 40px;
+			}
 			@media screen and (max-width: 991px) {
 				font-size: 36px;
 				padding-left: 15px;
 				padding-right: 15px;
 			}
 			@media screen and (max-width: 768px) {
-				font-size: 24px;
+			    font-size: 24px;
+			    line-height: 28px;
+			    margin-top: 16px;
+			    margin-bottom: 10px;
 			}
 		}
 		.home-credit {
@@ -493,10 +514,15 @@
 		@media screen and (max-width: 768px) {
 			margin: 0;
 			.max-button {
-				display: block;
-				text-align: center;
-				width: 100%;
-				margin-bottom: 1em;
+			    display: block;
+			    text-align: center;
+			    width: 100%;
+			    margin-bottom: .5em;
+			    max-width: 275px;
+			    margin-left: auto;
+			    margin-right: auto;
+			    height: 42px;
+			    line-height: 39px;
 			}
 		}
 	}
@@ -520,8 +546,14 @@
 		margin-top: 4em;
 		margin-bottom: 4em;
 		@media screen and (max-width: 768px) {
-			margin-top: 2em;
-			margin-bottom: 2em;
+			margin-top: 1.15em;
+			margin-bottom: 1.15em;
+			.play-button {
+			    height: 65px;
+			    width: 65px;
+			    line-height: 65px;
+			    background-size: 24px;
+			}
 		}
 	}
 	.john-float {
@@ -534,7 +566,16 @@
 		@media screen and (max-width: 991px) {
 			top: -146px;
 			width: 350px;
-			left: 50%;
+			left: 60%;
+		}
+		@media screen and (max-width: 768px) {
+			display: none;
+			// top: -146px;
+			// width: 460px !important;
+			// left: 76%;
+			// opacity: .3;
+			// height: auto;
+			// max-width: 9000px;
 		}
 	}
 	.vertical-center {
@@ -546,6 +587,10 @@
 		.col-md-12 {
 			margin: 0;
 			padding: 0;
+		}
+		@media screen and (max-width: 768px) {
+			position: static;
+			transform: translate(0,0);
 		}
 	}
 }

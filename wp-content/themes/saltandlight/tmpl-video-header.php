@@ -25,7 +25,7 @@ get_header(); ?>
 		$page_video_url = get_field('page_video_url');
 	
 		$page_style .= 'background-image: ' . $page_heading_bg . ';';
-		$page_style .= 'min-height: ' . $page_heading_height . ';';
+		$page_style .= 'height: ' . $page_heading_height . ';';
 
 		if (!$page_style) {  $use_style = 'page-heading-plain'; }
 
@@ -188,6 +188,7 @@ get_header(); ?>
 				</div>
 			</section>
 
+<?php if ('david' == '1') { ?>
 			<section class="stories">
 				<div class="container">
 					<div class="row">
@@ -215,6 +216,7 @@ get_header(); ?>
 				</div>
 			</section>
 
+<?php } ?>
 
 			<section class="trigger-zone">
 
@@ -331,7 +333,7 @@ jQuery(function($) {
 	var wrapper_top = $(".stepprogress .wrapper").offset().top;
 	$(window).scroll(function (){
 
-		    var distance = $('.stories').offset().top,
+		    var distance = $('.trigger-zone').offset().top,
 			    $window = $(window);
 
 			$window.scroll(function() {

@@ -51,8 +51,7 @@ html {
   -ms-text-size-adjust: 100%; }
 
 body {
-  margin: 0;
-  overflow-x: hidden; }
+  margin: 0; }
 
 article,
 aside,
@@ -221,6 +220,9 @@ table {
 td,
 th {
   padding: 0; }
+
+#page {
+  position: static; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -508,7 +510,7 @@ textarea {
   padding-bottom: 0 !important;
   padding-top: 2em !important; }
   .gform_wrapper.pastor_form_wrapper .gsection h2.gsection_title {
-    color: #ad875c;
+    color: #9f723f;
     font-size: 13px;
     font-weight: normal;
     text-transform: uppercase;
@@ -626,12 +628,12 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #ad875c;
+  color: #9f723f;
   outline: 0; }
   a:visited {
-    color: #ad875c; }
+    color: #9f723f; }
   a:hover, a:focus, a:active {
-    color: #ad875c;
+    color: #9f723f;
     text-decoration: none; }
   a:focus {
     outline: 0; }
@@ -686,6 +688,9 @@ a {
     font-weight: 600; }
     .main-navigation li:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 991px) {
+      .main-navigation li {
+        margin-right: 20px; } }
   .main-navigation a {
     box-sizing: border-box;
     color: #ffffff;
@@ -698,6 +703,10 @@ a {
     border-radius: 100px;
     padding-left: 28px;
     padding-right: 28px; }
+    @media screen and (max-width: 991px) {
+      .main-navigation li.enhanced a {
+        padding-left: 20px;
+        padding-right: 20px; } }
   .main-navigation li.login a {
     background: #e01612;
     border: none;
@@ -766,19 +775,18 @@ a {
 .mobile-nav {
   position: absolute;
   z-index: 100;
-  background: #ad875c;
+  background: #9f723f;
   width: 100%;
   height: 100%;
   color: #fff;
   transition: .75s all;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   top: 0;
   left: 0; }
   .mobile-nav a {
     color: #fff; }
-  @media screen and (max-width: 768px) {
-    .mobile-nav.show {
-      transform: translateX(0); } }
+  .mobile-nav.show {
+    transform: translateX(0); }
   .mobile-nav .mobile-nav-menu {
     margin: 0;
     margin-top: 80px;
@@ -1008,7 +1016,8 @@ a {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   padding-top: 180px;
-  position: relative; }
+  position: relative;
+  max-height: 100vh; }
   @media screen and (max-width: 768px) {
     .page-heading {
       max-height: 100vh;
@@ -1022,7 +1031,7 @@ a {
 
 .page-title,
 .trigger-title {
-  background: #ad875c;
+  background: #9f723f;
   color: #fff;
   text-align: center;
   padding: 1.75em 0; }
@@ -1030,6 +1039,9 @@ a {
 @media screen and (max-width: 768px) {
   .page-title h1 {
     font-size: 1.5em; } }
+
+h1, h2, h3 {
+  line-height: 1.35em; }
 
 .page-process {
   text-align: center; }
@@ -1052,16 +1064,19 @@ a {
   position: relative;
   z-index: 2; }
 
+.bang {
+  margin-top: -1px; }
+
 .bang_container {
   max-height: 0px;
   overflow: hidden;
   transition: 1.5s all; }
   .bang_container.open {
-    max-height: 1000px; }
+    max-height: 1500px; }
 
 .trigger {
   text-align: center;
-  background: url(img/trigger-bg.jpg) no-repeat #ad875c;
+  background: url(img/trigger-bg.jpg) no-repeat #9f723f;
   background-size: cover;
   color: #fff;
   padding: 5em 0; }
@@ -1135,7 +1150,7 @@ a {
         font-size: 26px;
         line-height: 1.25em; } }
     .steps_repeater .step_single h3 .step_name {
-      color: #ad875c;
+      color: #9f723f;
       display: block; }
   .steps_repeater .step_single .step_desc {
     font-size: 20px; }
@@ -1150,8 +1165,8 @@ a {
     width: 60px;
     height: 200px; }
   .steps_repeater .step_single .step_icon_linein {
-    border: 1px solid #ad875c;
-    color: #ad875c;
+    border: 1px solid #9f723f;
+    color: #9f723f;
     display: inline-block;
     font-weight: 100;
     font-size: 16px;
@@ -1163,7 +1178,7 @@ a {
     border-radius: 100px; }
   .steps_repeater .step_single .step_linein {
     display: block;
-    background: #ad875c;
+    background: #9f723f;
     width: 1px;
     height: 40px;
     margin: 0 auto; }
@@ -1182,7 +1197,8 @@ a {
   position: absolute;
   left: 50%;
   bottom: 50%;
-  transform: translate(-50%, 31%); }
+  transform: translate(-50%, 31%);
+  max-width: 100%; }
 
 .stories {
   background: #eee;
@@ -1192,7 +1208,7 @@ a {
   list-style: none;
   margin: 2em 0;
   padding: 0;
-  border: 1px solid #ad875c;
+  border: 1px solid #9f723f;
   background: #fff; }
   .steps-progress li {
     list-style: none;
@@ -1200,15 +1216,15 @@ a {
     padding: 5px;
     float: left;
     width: 25%;
-    border-right: 1px solid #ad875c;
+    border-right: 1px solid #9f723f;
     text-align: center; }
     .steps-progress li:last-child {
       border: none; }
     .steps-progress li:hover {
-      background-color: #ad875c;
+      background-color: #9f723f;
       color: #fff; }
     .steps-progress li.selected {
-      background-color: #ad875c;
+      background-color: #9f723f;
       color: #fff; }
 
 .steps-progress-container {
@@ -1266,7 +1282,7 @@ a {
   .stepprogress .wrapper {
     position: absolute;
     width: inherit;
-    border: 1px solid #ad875c; }
+    border: 1px solid #9f723f; }
     .stepprogress .wrapper.affix {
       position: fixed;
       top: 0px; }
@@ -1280,7 +1296,7 @@ a {
     height: 40px;
     margin-bottom: 0px;
     background-color: #fff;
-    border-right: 1px solid #ad875c; }
+    border-right: 1px solid #9f723f; }
     .stepprogress .bar:last-child {
       border-right: none; }
     .stepprogress .bar span {
@@ -1290,7 +1306,7 @@ a {
       width: 0;
       height: 40px;
       z-index: 0;
-      background-color: #ad875c; }
+      background-color: #9f723f; }
     .stepprogress .bar a {
       line-height: 40px;
       position: relative;
@@ -1335,6 +1351,11 @@ a {
   background: #a27d4a;
   color: #fff; }
   @media screen and (max-width: 768px) {
+    .page-template-tmpl-homepage {
+      background: url("img/john-maxwell-trans.png") no-repeat #a27d4a;
+      background-size: 135%;
+      background-position: 20% 30%; } }
+  @media screen and (max-width: 768px) {
     .page-template-tmpl-homepage .site-header {
       position: relative;
       margin: 0;
@@ -1354,6 +1375,9 @@ a {
       margin-bottom: 14px;
       position: relative;
       z-index: 4; }
+      @media screen and (max-width: 1200px) {
+        .page-template-tmpl-homepage .john-quote h1 {
+          font-size: 40px; } }
       @media screen and (max-width: 991px) {
         .page-template-tmpl-homepage .john-quote h1 {
           font-size: 36px;
@@ -1361,7 +1385,10 @@ a {
           padding-right: 15px; } }
       @media screen and (max-width: 768px) {
         .page-template-tmpl-homepage .john-quote h1 {
-          font-size: 24px; } }
+          font-size: 24px;
+          line-height: 28px;
+          margin-top: 16px;
+          margin-bottom: 10px; } }
     .page-template-tmpl-homepage .john-quote .home-credit {
       font-style: italic; }
       @media screen and (max-width: 991px) {
@@ -1375,7 +1402,12 @@ a {
         display: block;
         text-align: center;
         width: 100%;
-        margin-bottom: 1em; } }
+        margin-bottom: .5em;
+        max-width: 275px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 42px;
+        line-height: 39px; } }
   .page-template-tmpl-homepage .john-video-bg {
     position: absolute;
     margin: 0 auto;
@@ -1395,8 +1427,13 @@ a {
     margin-bottom: 4em; }
     @media screen and (max-width: 768px) {
       .page-template-tmpl-homepage .play-wrap {
-        margin-top: 2em;
-        margin-bottom: 2em; } }
+        margin-top: 1.15em;
+        margin-bottom: 1.15em; }
+        .page-template-tmpl-homepage .play-wrap .play-button {
+          height: 65px;
+          width: 65px;
+          line-height: 65px;
+          background-size: 24px; } }
   .page-template-tmpl-homepage .john-float {
     position: absolute;
     top: 0;
@@ -1408,7 +1445,10 @@ a {
       .page-template-tmpl-homepage .john-float {
         top: -146px;
         width: 350px;
-        left: 50%; } }
+        left: 60%; } }
+    @media screen and (max-width: 768px) {
+      .page-template-tmpl-homepage .john-float {
+        display: none; } }
   .page-template-tmpl-homepage .vertical-center {
     position: absolute;
     left: 50%;
@@ -1418,6 +1458,10 @@ a {
     .page-template-tmpl-homepage .vertical-center .col-md-12 {
       margin: 0;
       padding: 0; }
+    @media screen and (max-width: 768px) {
+      .page-template-tmpl-homepage .vertical-center {
+        position: static;
+        transform: translate(0, 0); } }
 
 .max-button {
   border: 2px solid #fff;

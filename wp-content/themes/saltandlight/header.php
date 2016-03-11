@@ -37,7 +37,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4  col-sm-4">
 					<div class="site-branding">
 						<?php if ( is_front_page() && is_home() ) : ?>
 							<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -53,7 +53,7 @@
 					</div><!-- .site-branding -->
 				</div>
 
-				<div class="col-md-8">
+				<div class="col-md-8 col-sm-8">
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<div class="visible-sm visible-md visible-lg">
