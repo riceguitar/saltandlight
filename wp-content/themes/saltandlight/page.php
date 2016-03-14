@@ -52,24 +52,52 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 			?>
 
-							<?php the_content(); ?>
+				<?php the_content(); ?>
 
 			<?php
 			endwhile; // End of the loop.
 			?>
 
+
+			<?php if (get_field('get_started_enable')) : ?>
+			<section class="trigger-zone">
+
+				<div class="trigger trigger-title" >
+					<a href="#" class="trigger-btn" onClick="_gaq.push(['_trackEvent', 'Page events', 'Click', 'Get Started']);">Get Started</a>
+				</div>
+
+				<div class="bang">
+					<div class="container">
+						<div class="col-md-10 col-md-offset-1">
+
+						<div class="bang_container">							
+							<?php gravity_form(2, false); ?>
+						</div>
+
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+
+			<script>
+			jQuery(function($) {
+				$('.trigger-btn').click(function() {
+					$('.bang_container').toggleClass('open');
+					return false;
+				});
+			});
+			</script>
+			<?php endif; ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 
-<script>
-jQuery(function($) {
-	$('.trigger-btn').click(function() {
-		$('.bang_container').toggleClass('open');
-		return false;
-	});
-});
-</script>
+
+
+
 
 <?php
 get_footer();

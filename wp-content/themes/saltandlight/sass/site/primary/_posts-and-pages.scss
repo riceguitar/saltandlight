@@ -144,7 +144,7 @@ h1, h2, h3 {
     letter-spacing: 1px;
     display: inline-block;
     @media screen and (max-width: 640px) {
-		font-size: 18px;
+		font-size: 16px;
 		height: 60px;
 		line-height: 60px;
 	}
@@ -457,10 +457,15 @@ h1, h2, h3 {
 
 
 .page-template-tmpl-homepage {
-	background: #a27d4a;
+	background: $color__primary;
 	color: #fff;
+	@media screen and (max-width: 1024px) {
+		background: url("img/ipad-bg.jpg") no-repeat $color__primary;
+		background-size: contain;
+		background-position: 20% 30%;
+	}
 	@media screen and (max-width: 768px) {
-		background: url("img/john-maxwell-trans.png") no-repeat #a27d4a;
+		background: url("img/john-maxwell-trans.png") no-repeat $color__primary;
 		background-size: 135%;
 		background-position: 20% 30%;
 	}
@@ -534,6 +539,9 @@ h1, h2, h3 {
 		width: 100%;
 		left: 0;
 		overflow: hidden;
+		@media screen and (max-width: 1025px) {
+			display: none;
+		}
 		@media screen and (max-width: 768px) {
 			display: none;
 			position: static;
@@ -563,19 +571,13 @@ h1, h2, h3 {
 		width: 400px;
 		left: 50%;
 		transform: translate(-61%, 0%);
-		@media screen and (max-width: 991px) {
-			top: -146px;
+		@media screen and (max-width: 1025px) {
+			top: 10%;
 			width: 350px;
-			left: 60%;
+			left: 50%;
 		}
 		@media screen and (max-width: 768px) {
 			display: none;
-			// top: -146px;
-			// width: 460px !important;
-			// left: 76%;
-			// opacity: .3;
-			// height: auto;
-			// max-width: 9000px;
 		}
 	}
 	.vertical-center {
@@ -588,7 +590,7 @@ h1, h2, h3 {
 			margin: 0;
 			padding: 0;
 		}
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 1025px) {
 			position: static;
 			transform: translate(0,0);
 		}

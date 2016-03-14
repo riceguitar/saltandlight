@@ -122,4 +122,9 @@ require get_template_directory() . '/inc/jetpack.php';
 */
 add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
+// Enable ACF Options Page
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
 

@@ -221,7 +221,7 @@ get_header(); ?>
 			<section class="trigger-zone">
 
 				<div class="trigger trigger-title" >
-					<a href="#" class="trigger-btn"><?php the_field('trigger_text'); ?></a>
+					<a href="#" class="trigger-btn"  onClick="_gaq.push(['_trackEvent', 'Page events', 'Click', '<?php the_field('trigger_text'); ?>']);"><?php the_field('trigger_text'); ?></a>
 				</div>
 
 				<div class="bang">
@@ -265,26 +265,26 @@ Thank you for your time,
 										</div>
 
 										<div class="text-center">
-										<input type="submit" id="generate-email" />
+										<input type="submit" id="generate-email" onClick="_gaq.push(['_trackEvent', 'Page events', 'Click', 'Generate Email to Pastor']);"/>
 										</div>
 									</form>
 									</div>
 								</div>
 
 <script>
-jQuery(function() {
+	jQuery(function() {
 
-jQuery('#generate-email').click(function() {
-    Message = "mailto:" + jQuery('input[name=field-to]').val();
-    Message += "?subject=" + jQuery('input[name=field-subject]').val();
-    Message += "&body=" + encodeURIComponent(jQuery('textarea[name=field-message]').val());
-    console.log(Message);
-    location.href = Message;
-	//window.open(Message);
-    return false;
-});
+	jQuery('#generate-email').click(function() {
+	    Message = "mailto:" + jQuery('input[name=field-to]').val();
+	    Message += "?subject=" + jQuery('input[name=field-subject]').val();
+	    Message += "&body=" + encodeURIComponent(jQuery('textarea[name=field-message]').val());
+	    console.log(Message);
+	    location.href = Message;
+		//window.open(Message);
+	    return false;
+	});
 
-});
+	});
 </script>
 							<?php elseif (is_page()) : ?>
 								<?php gravity_form(2, false); ?>

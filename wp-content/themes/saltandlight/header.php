@@ -14,10 +14,18 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta name="viewport" content="width=1024, maximum-scale=1.0" /> -->
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0044/3573.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -39,13 +47,19 @@
 			<div class="row">
 				<div class="col-md-4  col-sm-4">
 					<div class="site-branding">
+
+						<?php 
+							if (get_field('global_logo', 'option')) {
+								$custom_logo = 'background-image: url('. get_field('global_logo', 'option') .');';
+							}
+						?>
 						<?php if ( is_front_page() && is_home() ) : ?>
-							<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-								<span class="site-logo-credit">brought to you by EQUIP</span>
+							<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" style="<?php echo $custom_logo; ?>"><?php bloginfo( 'name' ); ?></a>
+								<span class="site-logo-credit"><?php the_field('global_tag_line', 'option'); ?></span>
 							</h1>
 						<?php else : ?>
-							<p class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-								<span class="site-logo-credit">brought to you by EQUIP</span>
+							<p class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" style="<?php echo $custom_logo; ?>"><?php bloginfo( 'name' ); ?></a>
+								<span class="site-logo-credit"><?php the_field('global_tag_line', 'option'); ?></span>
 							</p>
 						<?php
 						endif;

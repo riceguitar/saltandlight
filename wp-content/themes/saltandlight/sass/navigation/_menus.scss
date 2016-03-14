@@ -191,6 +191,9 @@
 	color: #fff;
 	transition: .75s all;
 	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
 	top: 0;
 	left: 0;
 	a {
@@ -198,6 +201,9 @@
 	}
 	&.show {
 		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
 	}
 	.mobile-nav-menu {
 		margin: 0;
