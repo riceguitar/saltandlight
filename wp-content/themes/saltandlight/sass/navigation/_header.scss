@@ -3,10 +3,18 @@
 .site-header {
 	background: none;
 	position: absolute;
+	//position: relative;
 	width: 100%;
 	padding: $size__margin 0;
 	height: $size__heading-height;
 	z-index: 1;
+}
+
+.page-template-tmpl-homepage {
+	.site-header {
+		position: relative;
+		z-index: 2;
+	}
 }
 
 .site-branding {
@@ -14,6 +22,8 @@
 
 .site-logo {
 	margin: 0;
+	display: inline-block;
+	text-align: center;
 	a {
 		background: url('img/salt-and-light-logo.png') no-repeat;
 		background-size: contain;
@@ -21,8 +31,8 @@
 		margin: 0;
 		text-indent: -500px;
 		overflow: hidden;
-		width: 130px;
-		height: 129px;		
+		width: 200px;
+		height: 60px;		
 	}
 }
 

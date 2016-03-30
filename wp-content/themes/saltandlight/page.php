@@ -62,16 +62,34 @@ get_header(); ?>
 			<?php if (get_field('get_started_enable')) : ?>
 			<section class="trigger-zone">
 
-				<div class="trigger trigger-title" >
-					<a href="#" class="trigger-btn" onClick="_gaq.push(['_trackEvent', 'Page events', 'Click', 'Get Started']);">Get Started</a>
+				<div class="trigger trigger-title"  style="background-image: url('<?php the_field('trigger_bg_image'); ?>');">
+					<a href="#" class="trigger-btn" onClick="_gaq.push(['_trackEvent', 'Page events', 'Click', 'Get Started']);"><?php 
+						if (get_field('footer_cta_text')) {
+							the_field('footer_cta_text'); 
+						} else {
+							echo 'Get Started';
+						}	
+					?></a>
 				</div>
 
 				<div class="bang">
 					<div class="container">
 						<div class="col-md-10 col-md-offset-1">
 
+						<?php $bang_content = get_field('get_started_content_type'); ?>
 						<div class="bang_container">							
-							<?php gravity_form(2, false); ?>
+							<?php if ($bang_content == 'getstarted') : ?>			
+								<?php 
+								$getstartedID = get_field('get_started_content'); 
+								if ($getstartedID) {
+									gravity_form($getstartedID, false); 
+								} else {
+									echo 'Please select a Gravity Form ID.';
+								}
+								?>
+							<?php elseif ($bang_content == 'sharevision') : ?>
+								<?php include 'partial-sharevision.php'; ?>
+							<?php endif; ?>
 						</div>
 
 						</div>

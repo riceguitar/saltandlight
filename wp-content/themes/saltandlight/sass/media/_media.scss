@@ -15,7 +15,7 @@ object {
 }
 
 .play-button {
-	background: url('img/play-button.png') no-repeat 57% center;
+	background: url('img/play-button.png') no-repeat 57% center $color__brand;
 	background-size: 35px;
 	border-radius: 100%;
 	border: 1px solid #fff;
@@ -25,7 +25,7 @@ object {
 	line-height: 85px;
 	transition: .25s all;
 	&:hover {
-		background-color: $color__brand;
+		background-color: rgba(255,255,255,0);
 	}
 }
 

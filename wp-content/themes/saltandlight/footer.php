@@ -13,6 +13,24 @@
 
 	</div><!-- #content -->
 
+
+	<div class="footer-share">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p class="share-cta">
+						<span class="lead-text">Share this quote on</span>
+						<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.iequip.church" class="social-pop" target="_blank"><img class="share-link-img" src="<?php echo get_stylesheet_directory_uri() . '/img/facebook-hover.png'; ?>" /></a> <a href="https://twitter.com/home?status=%22What%20are%20we%20going%20to%20do%20for%20people%20who%20will%20never%20come%20to%20church?%22%20-%20John%20C.%20Maxwell%20%23johnmaxwell%20%23leadership%20http%3A//iequip.church"  class="social-pop"  target="_blank"><img class="share-link-img"  src="<?php echo get_stylesheet_directory_uri() . '/img/twitter-hover.png'; ?>" /></a>
+					</p>
+					<h2>"What are we going to do for people who will never come to church?"</h2>
+					<span class="author-credit">- John C. Maxwell</span>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			
@@ -50,6 +68,15 @@
 				</div>
 			</div>
 
+			<div class="row">
+
+				<div class="col-md-12 text-center">
+					<a href="https://www.facebook.com/equip.leadership" target="_blank" class="footer-social footer-fb" title="Facebook Link">Facebook</a>
+					<a href="https://twitter.com/EQUIPLeaders" target="_blank" class="footer-social footer-twitter" title="Twitter Link">Twitter</a>
+				</div>
+
+			</div>
+
 
 		</div>
 	</footer><!-- #colophon -->
@@ -62,6 +89,12 @@
 			$('#nav-icon1').toggleClass('open');
 			return false;
 		})
+
+		$('.social-pop').click(function(e) {
+	        e.preventDefault();
+	        window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+	        return false;
+	    });
 	});
 
 	(function() {

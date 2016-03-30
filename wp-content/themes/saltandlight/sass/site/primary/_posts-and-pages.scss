@@ -49,7 +49,11 @@
 	padding-top: $size__heading-height;
 	position: relative;
 	max-height: 100vh;
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1024px) {
+		max-height: 500px;
+		min-height: 500px;
+	}
+	@media screen and (max-width: 480px) {
 		max-height: 100vh;
 		min-height: 100vh !important;
 		background-position: 30% 50%;
@@ -58,7 +62,7 @@
 
 .page-player {
 	position: absolute;
-    bottom: 40%;
+    bottom: 50%;
     margin-bottom: -45px;
 }
 
@@ -121,7 +125,7 @@ h1, h2, h3 {
 
 .trigger {
 	text-align: center;
-	background: url(img/trigger-bg.jpg) no-repeat $color__primary;
+	background: 50% 50% no-repeat $color__primary;
 	background-size: cover;
 	color: #fff;
 	padding: 5em 0;
@@ -162,6 +166,9 @@ h1, h2, h3 {
 		z-index: 1;
 		top: 50%;
 		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
 		width: 100%;
 	}
 	.step_image_mobile {
@@ -173,6 +180,9 @@ h1, h2, h3 {
 		display: block;
 		margin: 0 auto;
 		width: 155px;
+		@media screen and (max-width: 990px) {
+			width: 100px;
+		}
 		@media screen and (max-width: 640px) {
 			width: 75px;
 		}
@@ -268,6 +278,9 @@ h1, h2, h3 {
     left: 50%;
     bottom: 50%;
     transform: translate(-50%, 31%);
+    -webkit-transform: translate(-50%, 31%);
+	-moz-transform: translate(-50%, 31%);
+	-ms-transform: translate(-50%, 31%);
     max-width: 100%;
 }
 
@@ -312,6 +325,9 @@ h1, h2, h3 {
 	}
 	.affix {
 		    max-width: 1140px;
+		    @media screen and (max-width: 1199px) {
+		    	max-width: 940px;
+		    }
 	}
 }
 
@@ -319,6 +335,27 @@ h1, h2, h3 {
 	top: 60px;
 	width: 100%;
 	z-index: 10;
+}
+
+.footer-share {
+	padding-top: 3em;
+    padding-bottom: 3em;
+    border-top: 1px solid #ccc;
+	h2 {
+		font-weight: bold;
+		font-size: 46px;
+	}
+	p.share-cta {
+		margin-top: 0em;
+		font-weight: bold;
+	}
+	.share-link-img {
+		width: 45px;
+	}
+	.lead-text {
+		display: block;
+		margin-bottom: .5em;
+	}
 }
 
 .site-footer {
@@ -359,6 +396,32 @@ h1, h2, h3 {
 			}
 		}
 	}
+	.footer-social {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 50% 50%;
+		text-indent: -1000px;
+		overflow: hidden;
+		transition: .25s all;
+		margin-left: 10px;
+		margin-right: 10px;
+		&.footer-fb {
+			background-image: url(img/facebook-white.png);
+			&:hover {
+				background-image: url(img/facebook-hover.png);
+			}
+		}
+		&.footer-twitter {
+			background-image: url(img/twitter-white.png);
+			&:hover {
+				background-image: url(img/twitter-hover.png);
+			}
+		}
+	}
+
 }
 
 
@@ -459,15 +522,19 @@ h1, h2, h3 {
 .page-template-tmpl-homepage {
 	background: $color__primary;
 	color: #fff;
+	.container-auto {
+		width: auto;
+	}
 	@media screen and (max-width: 1024px) {
-		background: url("img/ipad-bg.jpg") no-repeat $color__primary;
-		background-size: contain;
-		background-position: 20% 30%;
+		background: url("img/ipad-new-bg.jpg") no-repeat $color__primary;
+		background-size: cover;
+		background-position: 50%;
 	}
 	@media screen and (max-width: 768px) {
-		background: url("img/john-maxwell-trans.png") no-repeat $color__primary;
-		background-size: 135%;
-		background-position: 20% 30%;
+		background: url("img/ipad-new-bg.jpg") no-repeat $color__primary;
+		background-size: cover;
+		background-position: 50%;
+		background-attachment: fixed;
 	}
 	.site-header {
 		@media screen and (max-width: 768px) {
@@ -487,8 +554,9 @@ h1, h2, h3 {
 		max-width: 1140px;
 		h1 {
 			font-weight: 800; 
-			font-size: 60px; 
-			margin-top: 220px;
+			font-size: 54px; 
+			line-height: 1.25em;
+			// margin-top: 220px;
 			margin-bottom: 14px;
 			position: relative; 
 			z-index: 4;
@@ -538,6 +606,11 @@ h1, h2, h3 {
 		max-height: 100%;
 		width: 100%;
 		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
 		overflow: hidden;
 		@media screen and (max-width: 1025px) {
 			display: none;
@@ -547,12 +620,13 @@ h1, h2, h3 {
 			position: static;
 		}
 	}
-	.site-footer {
+	.site-footer,
+	.footer-share {
 		display: none;
 	}
 	.play-wrap {
-		margin-top: 4em;
-		margin-bottom: 4em;
+		margin-top: 2em;
+		margin-bottom: 2em;
 		@media screen and (max-width: 768px) {
 			margin-top: 1.15em;
 			margin-bottom: 1.15em;
@@ -568,9 +642,12 @@ h1, h2, h3 {
 		position: absolute;
 		top: 0;
 		z-index: 0;
-		width: 400px;
+		width: 205px;
 		left: 50%;
-		transform: translate(-61%, 0%);
+		transform: translate(-50%, 0%);
+		-webkit-transform: translate(-50%, 0%);
+		-moz-transform: translate(-50%, 0%);
+		-ms-transform: translate(-50%, 0%);
 		@media screen and (max-width: 1025px) {
 			top: 10%;
 			width: 350px;
@@ -585,6 +662,9 @@ h1, h2, h3 {
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%,-50%);
+		-webkit-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
 		width: 100%;
 		.col-md-12 {
 			margin: 0;
@@ -593,8 +673,36 @@ h1, h2, h3 {
 		@media screen and (max-width: 1025px) {
 			position: static;
 			transform: translate(0,0);
+			-webkit-transform: translate(0,0);
+			-moz-transform: translate(0,0);
+			-ms-transform: translate(0,0);
 		}
 	}
+
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+		#page {
+			height: 100%;
+		}
+
+		.site-content {
+		}
+
+		.home-box {
+			height: 100%;
+		}
+
+		.vertical-center {
+			position: absolute;
+			bottom: 20%;
+			left: 0;
+		}
+
+		.john-quote h1 {
+			font-size: 40px;
+			line-height: 46px;
+		}
+	}
+
 }
 
 .max-button {
@@ -616,6 +724,15 @@ h1, h2, h3 {
 	&:hover {
 		color: #fff;
 		background: $color__brand;
+	}
+}
+
+.max-red {
+	background-color: $color__highlight;
+	border-color: $color__highlight;
+	&:hover {
+		background: darken($color__highlight, 10%);
+		border-color: darken($color__highlight, 10%);
 	}
 }
 

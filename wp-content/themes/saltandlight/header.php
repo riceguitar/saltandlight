@@ -33,13 +33,12 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 	<div class="visible-xs">
 		<a class="mobile-toggle">
-		<div id="nav-icon1">
-		  <span></span>
-		  <span></span>
-		  <span></span>
-		</div>
+			<div id="nav-icon1">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			</div>
 		</a>
-		
 	</div>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -87,7 +86,12 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	</header><!-- #masthead -->
 
 	<nav class="mobile-nav" id="overlaynav">
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'mobile-nav-menu', 'walker' => $walker ) ); ?>
+		<?php if (is_page('home')) : ?>
+			<?php $walker = new Menu_With_Description; ?>
+			<?php wp_nav_menu( array('theme_location' => 'homepage','menu_id'=>'primary-menu', 'menu_class' => 'mobile-nav-menu', 'walker' => $walker) ); ?>
+		<?php else: ?>
+			<?php wp_nav_menu( array('theme_location' => 'primary', 'menu_id'=>'primary-menu', 'menu_class' => 'mobile-nav-menu')); ?>
+		<?php endif; ?>
 	</nav>
 
 	<div id="content" class="site-content">

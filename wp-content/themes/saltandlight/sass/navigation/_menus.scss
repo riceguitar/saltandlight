@@ -58,7 +58,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		letter-spacing: 1px;
-		font-size: 15px;
+		font-size: 14px;
 		font-weight: 600;
 
 		&:last-child {
@@ -67,10 +67,15 @@
 
 		&:hover > a,
 		&.focus > a {
+			color: $color__primary;
+		}
+
+		&.current-menu-item {
+			a {color: $color__primary;}
 		}
 
 		@media screen and (max-width: 991px) {
-			margin-right: 20px;
+			margin-right: 19px;
 		}
 	}
 	
@@ -79,8 +84,9 @@
 		color: $color__link-nav;
 		display: block;
 		text-decoration: none;
-		margin: 10px 0 0 0;
+		margin: 0px 0 0 0;
 		padding: 10px 0;
+		transition: .25s all;
 	}
 
 	li.enhanced a {
@@ -88,6 +94,11 @@
 		border-radius: 100px;
 		padding-left: 28px;
 		padding-right: 28px;
+		color: #fff;
+		&:hover {
+			background: rgba(255,255,255,.15);
+			color: #fff;
+		}
 		@media screen and (max-width: 991px) {
 			padding-left: 20px;
 			padding-right: 20px;
@@ -98,6 +109,10 @@
 		background: $color__highlight;
 		border: none;
 		border-color: $color__highlight;
+		&:hover {
+			background: darken($color__highlight, 10%);
+			border-color: darken($color__highlight, 10%);
+		}
 	}
 	li.home-enhanced a {
 		padding-top: 0;
@@ -117,12 +132,39 @@
 		color: #ffffff;
 		display: block;
 		text-decoration: none;
-		margin: 10px 0 10px 0;
+		margin: 0px 0 10px 0;
 		padding: 10px 32px;
 		text-align: center;
 		transition: .25s all;
 		&:hover {
 			background: darken($color__highlight, 10%);
+		}
+	}
+
+	li.home-simple a {
+		padding-top: 0;
+		.menu-desc {
+			font-weight: 100;
+			font-size: 12px;
+		}
+	}
+	li.home-simple a span.menu-link {
+		display: block;
+		background: none;
+		border: none;
+		border-color: #fff;
+		border: 2px solid #fff;
+		border-radius: 100px;
+		box-sizing: border-box;
+		color: #ffffff;
+		display: block;
+		text-decoration: none;
+		margin: 0px 0 10px 0;
+		padding: 10px 32px;
+		text-align: center;
+		transition: .25s all;
+		&:hover {
+			background: rgba(255,255,255,.2);
 		}
 	}
 
@@ -234,6 +276,33 @@
 			background: $color__highlight;
 			border: none;
 			border-color: $color__highlight;
+		}
+
+		li.home-simple a {
+			padding-top: 0;
+			.menu-desc {
+				font-weight: 100;
+				font-size: 12px;
+			}
+		}
+		li.home-simple a span.menu-link {
+			display: block;
+			background: none;
+			border: none;
+			border-color: #fff;
+			border: 2px solid #fff;
+			border-radius: 100px;
+			box-sizing: border-box;
+			color: #ffffff;
+			display: block;
+			text-decoration: none;
+			margin: 0px 0 10px 0;
+			padding: 10px 32px;
+			text-align: center;
+			transition: .25s all;
+			&:hover {
+				background: rgba(255,255,255,.2);
+			}
 		}
 	}
 }
